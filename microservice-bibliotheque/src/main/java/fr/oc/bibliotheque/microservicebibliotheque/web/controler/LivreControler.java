@@ -23,7 +23,7 @@ public class LivreControler {
     }
 
     @GetMapping(value = "/Bibliotheque/Categorie/id")
-    private List getListLivreCategorie(@PathVariable int categorieId){
+    public List<Livre> getListLivreCategorie(@PathVariable int categorieId){
         return livreDao.getLivresByCategorieId(categorieId);
     }
 }
